@@ -41,7 +41,7 @@
 .restaurant .main-container .restaurant-container img {
   height: 70%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
 .restaurant .main-container .restaurant-container .sub-container1 {
@@ -76,8 +76,8 @@
   padding-top: 5px;
   color: #000000;
   -webkit-text-decoration: double;
-          text-decoration: double;
+  text-decoration: double;
   font-weight: 800;
   margin-bottom: 10px;
   font-size: 18px;
-}/*# sourceMappingURL=-restaurants.css.map */
+} /*# sourceMappingURL=-restaurants.css.map */

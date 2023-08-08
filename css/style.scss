@@ -1,7 +1,7 @@
-@mixin flexCenter($direction) {
+@mixin flexCenter($direction, $aligndir) {
   display: flex;
   flex-direction: $direction;
-  align-items: center;
+  align-items: $aligndir;
   justify-content: center;
 }
 @import "./variables";
@@ -33,7 +33,7 @@ ul {
 
 /* SEARCH */
 .search {
-  @include flexCenter(row);
+  @include flexCenter(row, center);
   gap: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -44,7 +44,7 @@ ul {
 
 /* SUB-HEADING  */
 .sub-head {
-  @include flexCenter(column);
+  @include flexCenter(column, center);
   margin-bottom: 40px;
 
   h3 {
@@ -72,3 +72,26 @@ ul {
 
 /* RESTAUARANTS */
 @import "./-restaurants";
+// FOOTER
+.footer {
+  background-color: #383838;
+  color: #fff;
+  padding-left: 20px;
+  padding-top: 20px;
+  span {
+    padding-left: 10px;
+    font-weight: 600;
+  }
+
+  .footer-head {
+    margin-bottom: 15px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    li {
+      list-style: none;
+    }
+  }
+}
