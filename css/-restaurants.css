@@ -37,6 +37,7 @@
   padding-right: 1px;
   width: 100%;
   height: 250px;
+  position: relative;
 }
 .restaurant .main-container .restaurant-container:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -48,11 +49,13 @@
   border-radius: 20px 20px 0 0;
 }
 .restaurant .main-container .restaurant-container .new-item {
+  position: absolute;
   color: green;
   background-color: aquamarine;
   border-radius: 3px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 8px 24px;
+  top: 16px;
+  right: 16px;
 }
 .restaurant .main-container .restaurant-container .sub-container1 {
   display: flex;
@@ -64,6 +67,7 @@
   padding-top: 15px;
   padding-right: 15px;
   font-size: 20px;
+  color: #000000;
 }
 .restaurant .main-container .restaurant-container .sub-container2 {
   display: flex;
@@ -81,6 +85,7 @@
 .restaurant .main-container .restaurant-container .sub-container2 li {
   margin-bottom: 5px;
   font-size: 16px;
+  color: #000000;
 }
 .restaurant .main-container .restaurant-container .heading {
   padding-top: 5px;
@@ -90,4 +95,16 @@
   font-weight: 800;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+@media only screen and (min-width: 992px) {
+  .restaurant .main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .restaurant .main-container .restaurant-container {
+    min-width: 200px;
+  }
 }/*# sourceMappingURL=-restaurants.css.map */

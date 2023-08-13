@@ -42,6 +42,7 @@
       padding-right: 1px;
       width: 100%;
       height: 250px;
+      position: relative;
 
       &:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -53,11 +54,13 @@
         border-radius: 20px 20px 0 0;
       }
       .new-item {
+        position: absolute;
         color: green;
         background-color: aquamarine;
         border-radius: 3px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 8px 24px;
+        top: 16px;
+        right: 16px;
       }
 
       .sub-container1 {
@@ -67,6 +70,7 @@
           padding-top: 15px;
           padding-right: 15px;
           font-size: 20px;
+          color: #000000;
         }
       }
 
@@ -84,6 +88,7 @@
         li {
           margin-bottom: 5px;
           font-size: 16px;
+          color: #000000;
         }
       }
 
@@ -94,6 +99,17 @@
         font-weight: 800;
         margin-bottom: 10px;
         font-size: 18px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .restaurant {
+    .main-container {
+      @include flexdisplay(row);
+
+      .restaurant-container {
+        min-width: 200px;
       }
     }
   }
