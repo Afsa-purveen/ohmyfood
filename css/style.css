@@ -17,18 +17,23 @@ ul {
 }
 
 /* HEADER */
-.nav {
+.header-elements {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* SEARCH */
+}
+.header-elements .nav {
+  display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 10px;
   margin-top: 30px;
 }
-.nav img {
+.header-elements .nav img {
   width: 180px;
 }
-
-/* SEARCH */
-.search {
+.header-elements .search {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -147,12 +152,18 @@ ul {
   .working {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    gap: 15px;
     margin-bottom: 40px;
+  }
+  .working .step-number {
+    position: relative;
+    left: -30px;
+    top: 10px;
+    margin-bottom: 20px;
   }
   .working .working-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 /* RESTAUARANTS */
@@ -291,26 +302,37 @@ ul {
 }
 
 @media only screen and (min-width: 992px) {
-  .nav {
-    display: flex;
-    justify-content: left;
-    margin-bottom: 10px;
-    margin-top: 30px;
-    margin-left: 20px;
-  }
-  .nav img {
-    width: 180px;
-  }
-  /* SEARCH */
-  .search {
+  /* HEADER */
+  .header-elements {
     display: flex;
     flex-direction: row;
-    align-items: left;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 20px 0px 20px;
+    /* SEARCH */
+  }
+  .header-elements .nav {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    justify-content: left;
+    margin-bottom: 0px;
+    margin-top: 30px;
+  }
+  .header-elements .nav img {
+    width: 250px;
+  }
+  .header-elements .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     width: 20%;
-    margin-left: 20px;
-    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f2f2f2;
+    box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
   }
   /* SUB-HEADING  */
   .sub-head {

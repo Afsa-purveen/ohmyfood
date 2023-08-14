@@ -82,11 +82,17 @@
   .working {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    gap: 15px;
     margin-bottom: 40px;
+    .step-number {
+      position: relative;
+      left: -30px;
+      top: 10px;
+      margin-bottom: 20px;
+    }
     .working-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
     }
   }
 }
