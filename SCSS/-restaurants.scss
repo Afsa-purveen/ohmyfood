@@ -65,15 +65,34 @@
 
       .sub-container1 {
         @include flexdisplay(row);
+        position: relative;
 
         i {
           padding-top: 15px;
           padding-right: 15px;
           font-size: 20px;
           color: #000000;
+          position: relative;
+          z-index: 1;
+        }
+        input[type="checkbox"] {
+          position: absolute;
+          padding-top: 15px;
+          padding-right: 15px;
+          opacity: 0;
+          width: 20px;
+          height: 20px;
+          z-index: 2;
+          right: 15px;
+          bottom: 17px;
+        }
+        input[type="checkbox"]:checked ~ i {
+          color: #773185;
+          background-clip: text;
+          -webkit-background-clip: text;
+          font-weight: 900;
         }
       }
-
       .sub-container2 {
         @include flexdisplay(column);
         padding: 8px;
@@ -99,6 +118,18 @@
         font-weight: 800;
         margin-bottom: 10px;
         font-size: 18px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .restaurant {
+    h3 {
+      text-align: center;
+    }
+    .main-container {
+      .restaurant-container {
+        width: 75%;
       }
     }
   }

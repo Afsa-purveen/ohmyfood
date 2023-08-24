@@ -41,10 +41,15 @@
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     font-size: 16px;
-
+    &:hover {
+      background-color: #9256dc13;
+    }
     i {
       color: rgb(34, 33, 33);
       font-size: 16px;
+      &:hover {
+        color: #9356dc;
+      }
     }
 
     span {
@@ -74,6 +79,7 @@
       i {
         font-size: 50px;
         color: rgba(0, 0, 0, 0.61);
+        transition: color 0.3s ease;
       }
     }
   }
