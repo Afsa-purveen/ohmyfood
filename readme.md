@@ -1,3 +1,1 @@
-# ohmyfood project2
-
-## its my second project
+# ohmyfood project  https://afsa-purveen.github.io/ohmyfood/
