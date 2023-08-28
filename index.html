@@ -23,7 +23,8 @@
         </div>
         <!-- SEARCH -->
         <div class="search">
-          <i class="fas fa-map-marker-alt"></i><span>Paris,Belleville</span>
+          <i class="fas fa-map-marker-alt"></i
+          ><input type="text" placeholder="Paris,Belleville" />
         </div>
       </div>
     </header>
@@ -42,7 +43,7 @@
       <div class="working-card">
         <div class="working-container">
           <div class="step-number">
-            <span>1</span>
+            <span class="step-number-span">1</span>
           </div>
           <i class="fas fa-mobile-alt"></i>
           <span>Choose a restaurant</span>
@@ -51,7 +52,7 @@
       <div class="working-card">
         <div class="working-container">
           <div class="step-number">
-            <span>2</span>
+            <span class="step-number-span">2</span>
           </div>
           <i class="fas fa-list"></i>
           <span>Create your menu</span>
@@ -60,7 +61,7 @@
       <div class="working-card">
         <div class="working-container">
           <div class="step-number">
-            <span>3</span>
+            <span class="step-number-span">3</span>
           </div>
           <i class="fas fa-store"></i>
           <span>Go enjoy it at restaurant</span>
@@ -71,9 +72,11 @@
     <div class="restaurant" id="res">
       <h3>Restaurants</h3>
       <div class="main-container">
-        <a href="menu3.html" class="restaurant-container">
-          <img src="images/restaurants/img1.jpg" />
-          <div class="new-item">New</div>
+        <div href="menu3.html" class="restaurant-container">
+          <a href="menu3.html">
+            <img src="images/restaurants/img1.jpg" />
+            <div class="new-item">New</div></a
+          >
           <div class="sub-container1">
             <div class="sub-container2">
               <ul>
@@ -81,13 +84,19 @@
                 <li>New York</li>
               </ul>
             </div>
-            <input type="checkbox" id="heart1" class="heart-checkbox" />
-            <i class="far fa-heart"></i>
+            <div class="heart-button">
+              <i class="far fa-heart"></i>
+              <div class="solid-heart">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
           </div>
-        </a>
-        <a href="menu2.html" class="restaurant-container">
-          <img src="images/restaurants/img2.jpg" />
-          <div class="new-item">New</div>
+        </div>
+        <div class="restaurant-container">
+          <a href="menu2.html">
+            <img src="images/restaurants/img2.jpg" />
+            <div class="new-item">New</div>
+          </a>
           <div class="sub-container1">
             <div class="sub-container2">
               <ul>
@@ -95,12 +104,18 @@
                 <li>New York</li>
               </ul>
             </div>
-            <input type="checkbox" id="heart1" class="heart-checkbox" />
-            <i class="far fa-heart"></i>
+            <div class="heart-button">
+              <i class="far fa-heart"></i>
+              <div class="solid-heart">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
           </div>
-        </a>
-        <a href="menu1.html" class="restaurant-container">
-          <img src="images/restaurants/img3.jpg" />
+        </div>
+        <div class="restaurant-container">
+          <a href="menu1.html">
+            <img src="images/restaurants/img3.jpg" />
+          </a>
           <div class="sub-container1">
             <div class="sub-container2">
               <ul>
@@ -108,12 +123,18 @@
                 <li>New York</li>
               </ul>
             </div>
-            <input type="checkbox" id="heart1" class="heart-checkbox" />
-            <i class="far fa-heart"></i>
+            <div class="heart-button">
+              <i class="far fa-heart"></i>
+              <div class="solid-heart">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
           </div>
-        </a>
-        <a href="menu4.html" class="restaurant-container">
-          <img src="images/restaurants/img4.jpg" />
+        </div>
+        <div class="restaurant-container">
+          <a href="menu4.html">
+            <img src="images/restaurants/img4.jpg" />
+          </a>
           <div class="sub-container1">
             <div class="sub-container2">
               <ul>
@@ -121,10 +142,14 @@
                 <li>New York</li>
               </ul>
             </div>
-            <input type="checkbox" id="heart1" class="heart-checkbox" />
-            <i class="far fa-heart"></i>
+            <div class="heart-button">
+              <i class="far fa-heart"></i>
+              <div class="solid-heart">
+                <i class="fas fa-heart"></i>
+              </div>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
     <!-- FOOTER -->

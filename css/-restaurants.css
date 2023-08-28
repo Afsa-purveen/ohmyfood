@@ -42,8 +42,14 @@
 .restaurant .main-container .restaurant-container:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.restaurant .main-container .restaurant-container img {
+.restaurant .main-container .restaurant-container a {
   height: 70%;
+  display: block;
+  text-decoration: none;
+}
+.restaurant .main-container .restaurant-container a img {
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0 0;
@@ -62,32 +68,29 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
-.restaurant .main-container .restaurant-container .sub-container1 i {
-  padding-top: 15px;
-  padding-right: 15px;
-  font-size: 20px;
+.restaurant .main-container .restaurant-container .sub-container1 .heart-button {
+  margin-right: 20px;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 0;
+}
+.restaurant .main-container .restaurant-container .sub-container1 .heart-button i {
+  opacity: 1;
   color: #000000;
-  position: relative;
-  z-index: 1;
+  font-size: 23px;
 }
-.restaurant .main-container .restaurant-container .sub-container1 input[type=checkbox] {
+.restaurant .main-container .restaurant-container .sub-container1 .heart-button .solid-heart i {
   position: absolute;
-  padding-top: 15px;
-  padding-right: 15px;
+  top: 0;
+  left: 0;
   opacity: 0;
-  width: 20px;
-  height: 20px;
-  z-index: 2;
-  right: 15px;
-  bottom: 17px;
+  transition: opacity 0.3s ease-in;
 }
-.restaurant .main-container .restaurant-container .sub-container1 input[type=checkbox]:checked ~ i {
-  color: #773185;
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-weight: 900;
+.restaurant .main-container .restaurant-container .sub-container1 .heart-button .solid-heart i:hover {
+  opacity: 1;
+  color: rgb(141, 75, 141);
 }
 .restaurant .main-container .restaurant-container .sub-container2 {
   display: flex;

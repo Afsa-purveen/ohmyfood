@@ -47,12 +47,18 @@
       &:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       }
-
-      img {
+      a {
         height: 70%;
-        object-fit: cover;
-        border-radius: 20px 20px 0 0;
+        display: block; // Ensure the anchor tag covers the entire container
+        text-decoration: none;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 20px 20px 0 0;
+        }
       }
+
       .new-item {
         position: absolute;
         color: green;
@@ -65,32 +71,33 @@
 
       .sub-container1 {
         @include flexdisplay(row);
-        position: relative;
 
-        i {
-          padding-top: 15px;
-          padding-right: 15px;
-          font-size: 20px;
-          color: #000000;
+        .heart-button {
+          margin-right: 20px;
           position: relative;
-          z-index: 1;
-        }
-        input[type="checkbox"] {
-          position: absolute;
-          padding-top: 15px;
-          padding-right: 15px;
-          opacity: 0;
-          width: 20px;
-          height: 20px;
-          z-index: 2;
-          right: 15px;
-          bottom: 17px;
-        }
-        input[type="checkbox"]:checked ~ i {
-          color: #773185;
-          background-clip: text;
-          -webkit-background-clip: text;
-          font-weight: 900;
+          width: 24px;
+          height: 24px;
+          border: 0;
+          i {
+            opacity: 1;
+            color: #000000;
+            font-size: 23px;
+          }
+          .solid-heart {
+            i {
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+
+              transition: opacity 0.3s ease-in;
+
+              &:hover {
+                opacity: 1;
+                color: rgb(141, 75, 141);
+              }
+            }
+          }
         }
       }
       .sub-container2 {

@@ -2,6 +2,10 @@
 /* WORKING */
 @import "./variables";
 .working {
+  h3 {
+    font-weight: 800;
+    font-size: 23px;
+  }
   font-family: "Roboto";
   display: flex;
   flex-direction: column;
@@ -20,8 +24,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
     z-index: 1;
+    .step-number-span {
+      color: #fff;
+    }
   }
 
   a {
@@ -36,24 +42,25 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     font-size: 16px;
     &:hover {
-      background-color: #9256dc13;
-    }
-    i {
-      color: rgb(34, 33, 33);
-      font-size: 16px;
-      &:hover {
+      background-color: #5c5b5e13;
+      i {
         color: #9356dc;
       }
+    }
+    i {
+      color: rgba(34, 33, 33, 0.658);
+      font-size: 18px;
     }
 
     span {
       color: rgb(57, 57, 58);
+      font-size: 18px;
     }
   }
 }
@@ -75,7 +82,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-width: 200px;
       i {
         font-size: 50px;
         color: rgba(0, 0, 0, 0.61);

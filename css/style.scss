@@ -82,19 +82,29 @@ ul {
   /* SEARCH */
   .search {
     @include flexCenter(row, center);
+    justify-content: center;
     gap: 10px;
     width: 100%;
+    border-radius: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #f2f2f2;
+    background-color: #b4b4b485;
     box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    input::placeholder {
+      color: black;
+    }
+    input {
+      border: 0px;
+      background-color: #b4b4b400;
+    }
   }
 }
 /* SUB-HEADING  */
 .sub-head {
   @include flexCenter(column, center);
   margin-bottom: 40px;
+  background-color: #f2f2f2;
+  padding-top: 20px;
 
   h3 {
     font-size: 25px;
@@ -102,18 +112,24 @@ ul {
 
   p {
     max-width: 302px;
-    text-align: left;
+    text-align: center;
+    font-weight: 400;
+    font-size: 19px;
+    color: #383838a4;
   }
 
   button {
     border-radius: 50px;
     background-image: $primaryClr;
     color: #fff;
+    box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.1);
     padding: 20px;
     padding-left: 30px;
     padding-right: 30px;
     margin-top: 20px;
     border: #fff;
+    margin-bottom: 40px;
+    font-size: 18px;
     &:hover {
       background-image: linear-gradient(to bottom, #ff79d9cb, #9256dcc4);
       box-shadow: 18px 18px 18px rgba(0, 0, 0, 0.1);
@@ -189,7 +205,8 @@ ul {
       width: 20%;
       padding-top: 20px;
       padding-bottom: 20px;
-      background-color: #f2f2f2;
+      border-radius: 20px;
+      background-color: #b4b4b485;
       box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.1);
       margin-bottom: 10px;
     }
@@ -197,7 +214,7 @@ ul {
   /* SUB-HEADING  */
   .sub-head {
     @include flexCenter(column, flex-start);
-    margin-left: 20px;
+    padding-left: 20px;
     P {
       min-width: 400px;
     }

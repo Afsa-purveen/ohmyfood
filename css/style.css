@@ -78,13 +78,24 @@ ul {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  justify-content: center;
   gap: 10px;
   width: 100%;
+  border-radius: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #f2f2f2;
+  background-color: rgba(180, 180, 180, 0.5215686275);
   box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+}
+.header-elements .search input::-moz-placeholder {
+  color: black;
+}
+.header-elements .search input::placeholder {
+  color: black;
+}
+.header-elements .search input {
+  border: 0px;
+  background-color: rgba(180, 180, 180, 0);
 }
 
 /* SUB-HEADING  */
@@ -94,23 +105,31 @@ ul {
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
+  background-color: #f2f2f2;
+  padding-top: 20px;
 }
 .sub-head h3 {
   font-size: 25px;
 }
 .sub-head p {
   max-width: 302px;
-  text-align: left;
+  text-align: center;
+  font-weight: 400;
+  font-size: 19px;
+  color: rgba(56, 56, 56, 0.6431372549);
 }
 .sub-head button {
   border-radius: 50px;
   background-image: linear-gradient(to bottom, #ff79da, #9356dc);
   color: #fff;
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.1);
   padding: 20px;
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 20px;
   border: #fff;
+  margin-bottom: 40px;
+  font-size: 18px;
 }
 .sub-head button:hover {
   background-image: linear-gradient(to bottom, rgba(255, 121, 217, 0.7960784314), rgba(146, 86, 220, 0.768627451));
@@ -129,6 +148,10 @@ ul {
   margin-right: 20px;
   margin-bottom: 40px;
 }
+.working h3 {
+  font-weight: 800;
+  font-size: 23px;
+}
 .working .step-number {
   position: relative;
   left: -30px;
@@ -139,8 +162,10 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
   z-index: 1;
+}
+.working .step-number .step-number-span {
+  color: #fff;
 }
 .working a {
   text-decoration: none;
@@ -152,24 +177,25 @@ ul {
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 10px;
+  gap: 20px;
   padding: 20px;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   font-size: 16px;
 }
 .working .working-container:hover {
-  background-color: rgba(146, 86, 220, 0.0745098039);
+  background-color: rgba(92, 91, 94, 0.0745098039);
+}
+.working .working-container:hover i {
+  color: #9356dc;
 }
 .working .working-container i {
-  color: rgb(34, 33, 33);
-  font-size: 16px;
-}
-.working .working-container i:hover {
-  color: #9356dc;
+  color: rgba(34, 33, 33, 0.658);
+  font-size: 18px;
 }
 .working .working-container span {
   color: rgb(57, 57, 58);
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -191,7 +217,6 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 200px;
   }
   .working .working-container i {
     font-size: 50px;
@@ -261,8 +286,14 @@ ul {
 .restaurant .main-container .restaurant-container:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.restaurant .main-container .restaurant-container img {
+.restaurant .main-container .restaurant-container a {
   height: 70%;
+  display: block;
+  text-decoration: none;
+}
+.restaurant .main-container .restaurant-container a img {
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0 0;
@@ -281,32 +312,29 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
-.restaurant .main-container .restaurant-container .sub-container1 i {
-  padding-top: 15px;
-  padding-right: 15px;
-  font-size: 20px;
+.restaurant .main-container .restaurant-container .sub-container1 .heart-button {
+  margin-right: 20px;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 0;
+}
+.restaurant .main-container .restaurant-container .sub-container1 .heart-button i {
+  opacity: 1;
   color: #000000;
-  position: relative;
-  z-index: 1;
+  font-size: 23px;
 }
-.restaurant .main-container .restaurant-container .sub-container1 input[type=checkbox] {
+.restaurant .main-container .restaurant-container .sub-container1 .heart-button .solid-heart i {
   position: absolute;
-  padding-top: 15px;
-  padding-right: 15px;
+  top: 0;
+  left: 0;
   opacity: 0;
-  width: 20px;
-  height: 20px;
-  z-index: 2;
-  right: 15px;
-  bottom: 17px;
+  transition: opacity 0.3s ease-in;
 }
-.restaurant .main-container .restaurant-container .sub-container1 input[type=checkbox]:checked ~ i {
-  color: #773185;
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-weight: 900;
+.restaurant .main-container .restaurant-container .sub-container1 .heart-button .solid-heart i:hover {
+  opacity: 1;
+  color: rgb(141, 75, 141);
 }
 .restaurant .main-container .restaurant-container .sub-container2 {
   display: flex;
@@ -418,7 +446,8 @@ ul {
     width: 20%;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #f2f2f2;
+    border-radius: 20px;
+    background-color: rgba(180, 180, 180, 0.5215686275);
     box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
   }
@@ -428,7 +457,7 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-left: 20px;
+    padding-left: 20px;
   }
   .sub-head P {
     min-width: 400px;
