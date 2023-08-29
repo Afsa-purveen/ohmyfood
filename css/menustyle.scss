@@ -119,6 +119,7 @@
     @include FlexDisp(column);
     margin-bottom: 20px;
     gap: 15px;
+    width: 100%;
 
     .menu-card {
       @include FlexDisp(row);
@@ -134,13 +135,11 @@
         height: 90px;
         display: flex;
         justify-content: center;
-        overflow: hidden;
         align-items: center;
         width: 0;
         border-radius: 0 20px 20px 0;
         transition: width 0.3s ease;
         overflow: hidden;
-        white-space: nowrap;
 
         i {
           color: rgb(255, 255, 255);
@@ -151,6 +150,8 @@
       }
       .menu-card-text {
         flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
         h3 {
           margin-bottom: 8px;
           overflow: hidden;
@@ -269,6 +270,17 @@
 .menu-card:nth-child(4) {
   animation-delay: 1.3s;
 }
+@media only screen and (min-width: 768px) {
+  .menu-container-head {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .menu-cards {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   // MENU CARDS
   .menu-wrapper {
@@ -289,6 +301,7 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      max-width: 1500px;
       h2 {
         font-family: "shrikhand";
         max-width: 453px;
@@ -303,6 +316,7 @@
   .menu-cards {
     @include FlexDisp(column);
     align-items: center;
+    max-width: 1500px;
 
     h4 {
       position: relative;
@@ -324,6 +338,8 @@
       @include FlexDisp(row);
       margin-bottom: 20px;
       gap: 15px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
 
       .menu-card {
         @include FlexDisp(row);
@@ -333,7 +349,7 @@
         background-color: #ffffffbe;
         text-decoration: none;
         padding-left: 10px;
-        min-width: 270px;
+        width: 400px;
         height: 130px;
         .checkmark {
           background-color: #99e2d0;
