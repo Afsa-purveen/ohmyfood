@@ -5,7 +5,7 @@
   flex-direction: $flexdirect;
   justify-content: space-between;
 }
-
+// MENU STYLES
 *,
 *::before,
 *::after {
@@ -130,6 +130,7 @@
       padding-left: 10px;
       min-width: auto;
       min-height: auto;
+      // CHECKMARK ANIMATION
       .checkmark {
         background-color: rgb(62, 241, 182);
         height: 90px;
@@ -224,6 +225,8 @@
     }
   }
 }
+// MENU CARD APPEAR ANIMATION
+
 .menu-cards {
   opacity: 0;
   transform: translateY(20px);
@@ -246,7 +249,7 @@
   transform: translateY(20px);
   animation: appear 1s ease-out forwards;
 }
-
+// MENU DISPLAY ANIMATION
 @keyframes appear {
   from {
     opacity: 0;
