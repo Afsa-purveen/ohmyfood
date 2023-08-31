@@ -135,6 +135,7 @@
 }
 .menu-cards .menu-card-container .menu-card .checkmark i {
   color: rgb(255, 255, 255);
+  font-size: 25px;
 }
 .menu-cards .menu-card-container .menu-card:hover .checkmark {
   width: 100px;
